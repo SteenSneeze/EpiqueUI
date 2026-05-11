@@ -17,7 +17,7 @@
 export const EPIQUE_APPS = [
   {
     id: 'home',
-    name: 'Épique',
+    name: 'Epique Hot Chocolate',
     url: 'https://epiquehotchocolate.com',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
@@ -27,7 +27,7 @@ export const EPIQUE_APPS = [
   {
     id: 'contractor',
     name: 'Contractor Portal',
-    url: 'https://contractor.epique.com.au',
+    url: 'https://epiquefoodandevents.com',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
       <circle cx="9" cy="7" r="4"/>
@@ -38,7 +38,7 @@ export const EPIQUE_APPS = [
   {
     id: 'finance',
     name: 'Finance Portal',
-    url: 'https://finance.epique.com.au',
+    url: 'https://finance.epiquefoodandevents.com',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
       <rect x="2" y="5" width="20" height="14" rx="2"/>
       <path d="M2 10h20"/>
@@ -48,33 +48,12 @@ export const EPIQUE_APPS = [
   {
     id: 'pos',
     name: 'Point of Sale',
-    url: 'https://pos.epique.com.au',
+    url: 'https://pos.epiquefoodandevents.com',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
       <rect x="2" y="3" width="20" height="14" rx="2"/>
       <path d="M8 21h8"/>
       <path d="M12 17v4"/>
       <path d="M7 8h4M7 12h2M13 8h4M13 12h4"/>
-    </svg>`,
-  },
-  {
-    id: 'events',
-    name: 'Events',
-    url: 'https://events.epique.com.au',
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-      <line x1="16" y1="2" x2="16" y2="6"/>
-      <line x1="8" y1="2" x2="8" y2="6"/>
-      <line x1="3" y1="10" x2="21" y2="10"/>
-    </svg>`,
-  },
-  {
-    id: 'wholesale',
-    name: 'Wholesale',
-    url: 'https://wholesale.epique.com.au',
-    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
-      <line x1="3" y1="6" x2="21" y2="6"/>
-      <path d="M16 10a4 4 0 0 1-8 0"/>
     </svg>`,
   },
 ];

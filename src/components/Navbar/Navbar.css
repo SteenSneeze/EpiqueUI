@@ -1,0 +1,135 @@
+/* ================================================
+   ÉPIQUE NAVBAR
+   ================================================ */
+
+.epique-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  background: var(--pink-200);
+  border-bottom: 1px solid var(--pink-300);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--sp-6);
+}
+
+.epique-navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+/* --- Logo --- */
+
+.epique-navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.epique-navbar-logo img {
+  height: 32px;
+  width: auto;
+}
+
+.epique-navbar-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.epique-navbar-logo-wordmark {
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  font-size: 18px;
+  color: var(--ink-800);
+  letter-spacing: -0.01em;
+}
+
+.epique-navbar-logo-sub {
+  font-family: var(--font-body);
+  font-weight: var(--weight-bold);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-500);
+  margin-top: 2px;
+}
+
+/* --- Portal name badge --- */
+
+.epique-navbar-portal {
+  font-family: var(--font-body);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ink-500);
+  padding: var(--sp-1) var(--sp-3);
+  background: rgba(21,17,16,0.06);
+  border-radius: var(--radius-badge);
+}
+
+/* --- Nav links --- */
+
+.epique-navbar-links {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-1);
+  list-style: none;
+}
+
+.epique-navbar-links a {
+  font-family: var(--font-body);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ink-700);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--radius-badge);
+  text-decoration: none;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.epique-navbar-links a:hover {
+  background: rgba(21,17,16,0.06);
+  color: var(--ink-800);
+}
+
+.epique-navbar-links a.active {
+  color: var(--ink-800);
+  background: rgba(21,17,16,0.08);
+}
+
+/* --- Right slot (launcher + optional CTA) --- */
+
+.epique-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+
+/* --- Mobile --- */
+
+@media (max-width: 640px) {
+  .epique-navbar {
+    padding: 0 var(--sp-4);
+  }
+
+  .epique-navbar-links {
+    display: none;
+  }
+
+  .epique-navbar-portal {
+    display: none;
+  }
+}

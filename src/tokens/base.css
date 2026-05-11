@@ -1,0 +1,246 @@
+/* ================================================
+   ÉPIQUE BASE STYLES
+   Import after tokens.css
+   ================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--ink-800);
+  font-family: var(--font-body);
+  font-weight: var(--weight-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+}
+
+/* --- Headings --- */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  color: var(--ink-800);
+}
+
+h1 { font-size: var(--text-h1); line-height: var(--leading-h1); }
+h2 { font-size: var(--text-h2); line-height: 1.15; }
+h3 { font-size: var(--text-h3); line-height: var(--leading-h3); }
+
+/* --- Eyebrow labels --- */
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--gold-500);
+}
+
+/* --- Body copy --- */
+
+p {
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
+  color: var(--ink-700);
+}
+
+p.lede {
+  font-size: var(--text-lede);
+  line-height: var(--leading-lede);
+}
+
+p.small {
+  font-size: var(--text-small);
+  color: var(--ink-500);
+}
+
+/* --- Links --- */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --- Buttons --- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-family: var(--font-body);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+/* Hero CTA — gold filled, pill */
+.btn-primary {
+  background: var(--gold-500);
+  color: var(--background);
+  padding: var(--sp-3) var(--sp-6);
+  border-radius: var(--radius-pill);
+}
+
+.btn-primary:hover {
+  background: var(--gold-600);
+}
+
+/* Outline — ink border */
+.btn-outline {
+  background: transparent;
+  color: var(--ink-800);
+  border: 1.5px solid var(--ink-800);
+  padding: var(--sp-3) var(--sp-6);
+  border-radius: var(--radius-pill);
+}
+
+.btn-outline:hover {
+  background: var(--ink-800);
+  color: var(--background);
+}
+
+/* Default — ink filled */
+.btn-default {
+  background: var(--ink-800);
+  color: var(--background);
+  padding: var(--sp-3) var(--sp-6);
+  border-radius: var(--radius-pill);
+}
+
+.btn-default:hover {
+  background: var(--ink-700);
+}
+
+/* --- Badges & chips --- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--radius-badge);
+  border: 1px solid var(--ink-200);
+  color: var(--ink-700);
+  background: transparent;
+}
+
+.badge-pink {
+  background: var(--pink-100);
+  border-color: var(--pink-200);
+  color: var(--ink-700);
+}
+
+.badge-gold {
+  background: var(--gold-50);
+  border-color: var(--gold-300);
+  color: var(--gold-600);
+}
+
+.badge-ink {
+  background: var(--ink-800);
+  border-color: var(--ink-800);
+  color: var(--background);
+}
+
+/* --- Cards --- */
+
+.card {
+  background: white;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  padding: var(--sp-6);
+  border: 1px solid var(--ink-100);
+}
+
+.card-pink {
+  background: var(--pink-200);
+  border-color: var(--pink-300);
+}
+
+.card-ink {
+  background: var(--ink-800);
+  color: var(--background);
+  border-color: var(--ink-800);
+}
+
+/* --- Form fields --- */
+
+.field-label {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ink-500);
+  margin-bottom: var(--sp-2);
+}
+
+.field-input {
+  width: 100%;
+  background: var(--pink-50);
+  border: 1.5px solid var(--ink-200);
+  border-radius: var(--radius-input);
+  padding: var(--sp-3) var(--sp-4);
+  font-family: var(--font-body);
+  font-weight: var(--weight-body);
+  font-size: var(--text-body);
+  color: var(--ink-800);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+  outline: none;
+}
+
+.field-input:focus {
+  border-color: var(--gold-500);
+  box-shadow: 0 0 0 3px rgba(154,138,72,0.15);
+}
+
+/* --- Layout shell --- */
+
+.page-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background);
+  padding-top: var(--navbar-height);
+}
+
+.page-content {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: var(--sp-12) var(--content-padding);
+}
+
+/* --- Divider --- */
+
+.divider {
+  width: 32px;
+  height: 1.5px;
+  background: var(--gold-500);
+  display: block;
+  margin-bottom: var(--sp-4);
+}

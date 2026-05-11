@@ -1,0 +1,180 @@
+/* ================================================
+   ÉPIQUE APP LAUNCHER
+   ================================================ */
+
+/* --- Trigger button (sits in the navbar) --- */
+
+.epique-launcher-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-input);
+  border: none;
+  background: transparent;
+  color: var(--ink-800);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.epique-launcher-btn:hover {
+  background: var(--pink-100);
+}
+
+.epique-launcher-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5;
+}
+
+/* --- Backdrop --- */
+
+.epique-launcher-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(21, 17, 16, 0.25);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 998;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.epique-launcher-backdrop.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* --- Panel --- */
+
+.epique-launcher-panel {
+  position: fixed;
+  top: calc(var(--navbar-height) + var(--sp-2));
+  right: var(--sp-6);
+  width: 320px;
+  background: white;
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--ink-100);
+  z-index: 999;
+  padding: var(--sp-4);
+  transform: translateY(-8px) scale(0.97);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform var(--transition-base),
+    opacity var(--transition-base);
+  transform-origin: top right;
+}
+
+.epique-launcher-panel.open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* --- Panel header --- */
+
+.epique-launcher-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--sp-4);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--ink-100);
+}
+
+.epique-launcher-title {
+  font-family: var(--font-body);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-eyebrow);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ink-500);
+}
+
+/* --- App grid --- */
+
+.epique-launcher-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-2);
+}
+
+/* --- App tile --- */
+
+.epique-app-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-2);
+  border-radius: var(--radius-input);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+  background: transparent;
+}
+
+.epique-app-tile:hover {
+  background: var(--pink-50);
+  border-color: var(--pink-200);
+  transform: translateY(-1px);
+}
+
+.epique-app-tile.active {
+  background: var(--pink-100);
+  border-color: var(--pink-200);
+}
+
+/* --- App icon well --- */
+
+.epique-app-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--pink-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-800);
+  transition: background var(--transition-fast);
+}
+
+.epique-app-tile:hover .epique-app-icon {
+  background: var(--pink-200);
+}
+
+.epique-app-tile.active .epique-app-icon {
+  background: var(--pink-200);
+}
+
+.epique-app-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 1.5;
+}
+
+/* --- App name --- */
+
+.epique-app-name {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 11px;
+  letter-spacing: 0.01em;
+  color: var(--ink-700);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.epique-app-tile.active .epique-app-name {
+  color: var(--ink-800);
+  font-weight: 700;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@steensneeze/epique-ui",
+  "version": "1.0.0",
+  "description": "Épique design system — shared components for all Épique subdomains.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./css": "./src/epique-ui.css",
+    "./tokens": "./src/tokens/tokens.css",
+    "./base": "./src/tokens/base.css",
+    "./Navbar": "./src/components/Navbar/Navbar.js",
+    "./Navbar/css": "./src/components/Navbar/Navbar.css",
+    "./AppLauncher": "./src/components/AppLauncher/AppLauncher.js",
+    "./AppLauncher/css": "./src/components/AppLauncher/AppLauncher.css"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "epique",
+    "design-system",
+    "ui"
+  ],
+  "author": "Barnabas Simko",
+  "license": "UNLICENSED",
+  "private": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SteenSneeze/EpiqueUI.git"
+  }
+}

@@ -27,7 +27,7 @@ export function initNavbar({
   links = [],
   ctaLabel = null,
   ctaHref = null,
-  logoHref = 'https://epiquehotchocolate.com',
+  logoHref = 'https://epiquefoodandevents.com',
   apps = EPIQUE_APPS,
 } = {}) {
 
@@ -61,7 +61,7 @@ export function initNavbar({
           <a href="${logoHref}" class="epique-navbar-logo" aria-label="Épique home">
             <div class="epique-navbar-logo-text">
               <span class="epique-navbar-logo-wordmark">Épique</span>
-              <span class="epique-navbar-logo-sub">Hot Chocolate</span>
+              <span class="epique-navbar-logo-sub">Food and Events</span>
             </div>
           </a>
           ${portalBadgeHTML}
